@@ -9,4 +9,7 @@ DOWNLOAD_LINK = ""          # Download Link of your Build
 FOX_BUILD_TYPE = ""         # Beta / Stable / Unofficial
 
 # Output File
-OUTFILE = "./output.txt"
+OUTFILE = "output.txt"
+
+# Open the Output File in Write Mode
+FILE = open(OUTFILE,w)
