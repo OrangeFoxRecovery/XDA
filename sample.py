@@ -3,10 +3,11 @@
 # Variables
 FDEVICE = ""                # Device Codename
 DEVICE_COMMON_NAME = ""     # Device Common Name
-BUILD_DATE = ""             # Date of the Build
+RELEASE_DATE = ""           # Date of Release of the Build
 XDA_INIT_DATA = ""          # Date when the XDA Thread was Created
 DOWNLOAD_LINK = ""          # Download Link of your Build
 FOX_BUILD_TYPE = ""         # Beta / Stable / Unofficial
+FOX_VERSION = ""            # The Full Version of the Release. (eg. "R11.1_1")
 
 # Output File
 OUTFILE = "output.txt"
@@ -15,7 +16,7 @@ OUTFILE = "output.txt"
 FILE = open(OUTFILE,w)
 
 # Head Part
-HEAD="""
+HEAD = """
 [CENTER][COLOR=rgb(251, 160, 38)][SIZE=7]OrangeFox Recovery Project[/SIZE][/COLOR]
 [IMG]https://image.ibb.co/cTMWux/logo.jpg[/IMG][/CENTER]
 [CODE]
@@ -31,4 +32,12 @@ HEAD="""
 */
 [/CODE]
 [CENTER][SIZE=5]OrangeFox is [URL='https://www.gnu.org/philosophy/free-sw.html']FREE SOFTWARE[/URL][/SIZE][/CENTER]
+"""
+
+# Information
+INFO = """
+ℹ️ [B][SIZE=4]Information[/SIZE][/B]
+Status: """ + FOX_BUILD_TYPE + """
+Version: """ + FOX_VERSION + """
+Release Date: """ + RELEASE_DATE + """
 """
