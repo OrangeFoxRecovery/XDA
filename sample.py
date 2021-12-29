@@ -132,3 +132,13 @@ CONTRIBUTIONS = """
 [U]Contributors[/U][/B]
 [URL='"""+MAINTAINER_XDA_URL+"""']"""+MAINTAINER+"""[/URL], [URL='https://forum.xda-developers.com/m/Sushrut1101.10817501/']Sushrut Gupta[/URL] ,[URL='https://forum.xda-developers.com/member.php?u=5850987']DarthJabba9[/URL], [URL='https://forum.xda-developers.com/member.php?u=9034403']MrYacha[/URL]
 """
+
+# Credits
+CREDITS = """
+[B]Credits[/B]
+* TeamWin - for TWRP
+* The OrangeFox Team - for your hard work
+* All our testers - for your patience and help
+* [USER=10817501]@Sushrut1101[/USER] - For this XDA Template
+* [URL='"""+MAINTAINER_XDA_URL+"""']"""+MAINTAINER+"""[/URL] - Maintainer
+"""
