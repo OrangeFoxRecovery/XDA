@@ -9,6 +9,10 @@ DOWNLOAD_LINK = ""          # Download Link of your Build
 FOX_BUILD_TYPE = ""         # Beta / Stable / Unofficial
 FOX_VERSION = ""            # The Full Version of the Release. (eg. "R11.1_1")
 
+FOX_SOURCES = "https://gitlab.com/OrangeFox"
+DEVICE_TREE = ""            # The Link of the Device Tree
+KERNEL = ""                 # The Link of the Kernel (Source or Prebuilt)
+
 # Output File
 OUTFILE = "output.txt"
 
@@ -40,4 +44,13 @@ INFO = """
 Status: """ + FOX_BUILD_TYPE + """
 Version: """ + FOX_VERSION + """
 Release Date: """ + RELEASE_DATE + """
+"""
+
+# Sources
+SOURCES = """
+ℹ️[B] Sources[/B]
+Source Code: [U][URL]"""+ FOX_SOURCES + """[/URL][/U]
+Device Tree: [URL]""" + DEVICE_TREE + """[/URL]
+Kernel: [URL]"""+ KERNEL + """[/URL]
+Template Generator: https://github.com/OrangeFoxRecovery/XDA.git
 """
