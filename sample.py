@@ -49,8 +49,14 @@ Release Date: """ + RELEASE_DATE + """
 # Sources
 SOURCES = """
 ℹ️[B] Sources[/B]
-Source Code: [U][URL]"""+ FOX_SOURCES + """[/URL][/U]
+Source Code: [U][URL]""" + FOX_SOURCES + """[/URL][/U]
 Device Tree: [URL]""" + DEVICE_TREE + """[/URL]
 Kernel: [URL]"""+ KERNEL + """[/URL]
 Template Generator: https://github.com/OrangeFoxRecovery/XDA.git
+"""
+
+# Downloads
+DOWNLOADS = """
+[SIZE=4]⬇️[/SIZE][B][SIZE=4]Downloads:[/SIZE][/B]
+[URL='"""+ DOWNLOAD_LINK +"""'][U]"""+ DOWNLOAD_LINK +"""[/U][/URL]
 """
