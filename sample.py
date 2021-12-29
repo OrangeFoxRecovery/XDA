@@ -60,3 +60,15 @@ DOWNLOADS = """
 [SIZE=4]⬇️[/SIZE][B][SIZE=4]Downloads:[/SIZE][/B]
 [URL='"""+ DOWNLOAD_LINK +"""'][U]"""+ DOWNLOAD_LINK +"""[/U][/URL]
 """
+
+# Installation
+INSTALLATION = """
+[B][SIZE=4]📲 Installation:[/SIZE][/B]
+[URL='https://wiki.orangefox.tech/en/guides/installing_orangefox'][U]https://wiki.orangefox.tech/en/guides/installing_orangefox[/U][/URL]
+"""
+
+# Documentation
+DOCUMENTATION = """
+[B][SIZE=4]📚 Documentation (FAQ):[/SIZE][/B]
+[URL='https://wiki.orangefox.tech/en/guides'][U]https://wiki.orangefox.tech/en/guides[/U][/URL]
+"""
