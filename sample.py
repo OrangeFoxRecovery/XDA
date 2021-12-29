@@ -112,3 +112,9 @@ TG_CHANNELS = """
 News - [URL='""" + NEWS_CHANNEL + """'][U]""" + NEWS_CHANNEL + """[/U][/URL]
 Support Chat - [URL='""" + SUPPORT_CHAT + """'][U]""" + SUPPORT_CHAT + """[/U][/URL]
 """
+
+# OrangeFox App
+APP = """
+🦊[B][SIZE=4] OrangeFox App:[/SIZE][/B]
+https://[URL='http://app.orangefox.tech/'][U]https://app.orangefox.tech/[/U][/URL]
+"""
