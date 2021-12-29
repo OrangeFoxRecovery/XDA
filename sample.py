@@ -13,6 +13,8 @@ FOX_SOURCES = "https://gitlab.com/OrangeFox"
 DEVICE_TREE = ""            # The Link of the Device Tree
 KERNEL = ""                 # The Link of the Kernel (Source or Prebuilt)
 
+DONATION_URL = ""           # Your Donation Link. Leave Blank if None.
+
 # Output File
 OUTFILE = "output.txt"
 
@@ -71,4 +73,12 @@ INSTALLATION = """
 DOCUMENTATION = """
 [B][SIZE=4]📚 Documentation (FAQ):[/SIZE][/B]
 [URL='https://wiki.orangefox.tech/en/guides'][U]https://wiki.orangefox.tech/en/guides[/U][/URL]
+"""
+
+# Donations
+if DONATION_URL=="":
+    DONATION_URL="https://t.me/Sushrut1101"
+DONATIONS = """
+[B][SIZE=4]💰 Donations:[/SIZE][/B]
+[U][URL]"""+ DONATION_URL +"""[/URL][/U]
 """
