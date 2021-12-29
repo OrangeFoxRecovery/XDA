@@ -148,3 +148,6 @@ OUTPUT = HEAD + '\n' + INFO + '\n' + SOURCES + '\n' + DOWNLOADS + '\n' + INSTALL
 
 # Write the Output to the Outfile
 FILE.write(OUTPUT)
+
+# Close the File
+FILE.close()
