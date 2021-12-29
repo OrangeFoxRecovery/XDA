@@ -17,6 +17,8 @@ SUPPORT_CHAT = ""           # Telegram Support Chat
 DEVICE_TREE = ""            # The Link of the Device Tree
 KERNEL = ""                 # The Link of the Kernel (Source or Prebuilt)
 
+MAINTAINER = ""             # Name of the Maintainer
+MAINTAINER_XDA_URL = ""     # XDA URL of the Maintainer
 DONATION_URL = ""           # Your Donation Link. Leave Blank if None.
 
 # Output File
@@ -123,4 +125,10 @@ https://[URL='http://app.orangefox.tech/'][U]https://app.orangefox.tech/[/U][/UR
 XDA_DEV_INFO = """
 [B][U]XDA : DevDB Information[/U]
 OrangeFox Recovery Project, Tool/Utility for """ + FDEVICE + """ (""" + DEVICE_COMMON_NAME + """)
+"""
+
+# Contributions
+CONTRIBUTIONS = """
+[U]Contributors[/U][/B]
+[URL='"""+MAINTAINER_XDA_URL+"""']"""+MAINTAINER+"""[/URL], [URL='https://forum.xda-developers.com/m/Sushrut1101.10817501/']Sushrut Gupta[/URL] ,[URL='https://forum.xda-developers.com/member.php?u=5850987']DarthJabba9[/URL], [URL='https://forum.xda-developers.com/member.php?u=9034403']MrYacha[/URL]
 """
