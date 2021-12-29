@@ -10,6 +10,8 @@ FOX_BUILD_TYPE = ""         # Beta / Stable / Unofficial
 FOX_VERSION = ""            # The Full Version of the Release. (eg. "R11.1_1")
 
 FOX_SOURCES = "https://gitlab.com/OrangeFox"
+SOURCE_CHANGELOG = "https://wiki.orangefox.tech/changelog"
+
 DEVICE_TREE = ""            # The Link of the Device Tree
 KERNEL = ""                 # The Link of the Kernel (Source or Prebuilt)
 
@@ -81,4 +83,12 @@ if DONATION_URL=="":
 DONATIONS = """
 [B][SIZE=4]💰 Donations:[/SIZE][/B]
 [U][URL]"""+ DONATION_URL +"""[/URL][/U]
+"""
+
+# Source Changelogs
+if FOX_SOURCES=="https://gitlab.com/OrangeFox":
+    SOURCE_CHANGELOG = "https://wiki.orangefox.tech/changelog"
+CHANGELOG = """
+[B][SIZE=4]📒 Source changelog:[/SIZE][/B]
+[URL='""" + SOURCE_CHANGELOG + """'][U]""" + SOURCE_CHANGELOG + """[/U][/URL]
 """
