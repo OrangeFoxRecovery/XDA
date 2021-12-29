@@ -118,3 +118,9 @@ APP = """
 🦊[B][SIZE=4] OrangeFox App:[/SIZE][/B]
 https://[URL='http://app.orangefox.tech/'][U]https://app.orangefox.tech/[/U][/URL]
 """
+
+# XDA DevDB Information
+XDA_DEV_INFO = """
+[B][U]XDA : DevDB Information[/U]
+OrangeFox Recovery Project, Tool/Utility for """ + FDEVICE + """ (""" + DEVICE_COMMON_NAME + """)
+"""
