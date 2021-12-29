@@ -24,6 +24,9 @@ DONATION_URL = ""           # Your Donation Link. Leave Blank if None.
 # Output File
 OUTFILE = "output.txt"
 
+# Import Required Libraries
+import sys
+
 # Open the Output File in Write Mode
 FILE = open(OUTFILE,w)
 
@@ -154,3 +157,6 @@ FILE.close()
 
 # Print a Message
 print("DONE! You can now Find the Output in:",OUTFILE,'\n')
+
+# Exit
+sys.exit()
