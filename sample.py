@@ -145,3 +145,6 @@ CREDITS = """
 
 # The Output
 OUTPUT = HEAD + '\n' + INFO + '\n' + SOURCES + '\n' + DOWNLOADS + '\n' + INSTALLATION + '\n' + DOCUMENTATION + '\n' + DONATIONS + '\n' + CHANGELOG + '\n' + TG_CHANNELS + '\n' + APP + '\n' + XDA_DEV_INFO + '\n' + CONTRIBUTIONS + '\n' + CREDITS + '\n'
+
+# Write the Output to the Outfile
+FILE.write(OUTPUT)
