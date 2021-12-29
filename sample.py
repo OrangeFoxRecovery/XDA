@@ -11,6 +11,8 @@ FOX_VERSION = ""            # The Full Version of the Release. (eg. "R11.1_1")
 
 FOX_SOURCES = "https://gitlab.com/OrangeFox"
 SOURCE_CHANGELOG = "https://wiki.orangefox.tech/changelog"
+NEWS_CHANNEL = ""           # Telegram Updates Channel
+SUPPORT_CHAT = ""           # Telegram Support Chat
 
 DEVICE_TREE = ""            # The Link of the Device Tree
 KERNEL = ""                 # The Link of the Kernel (Source or Prebuilt)
@@ -91,4 +93,22 @@ if FOX_SOURCES=="https://gitlab.com/OrangeFox":
 CHANGELOG = """
 [B][SIZE=4]📒 Source changelog:[/SIZE][/B]
 [URL='""" + SOURCE_CHANGELOG + """'][U]""" + SOURCE_CHANGELOG + """[/U][/URL]
+"""
+
+# Telegram Channels
+if FOX_BUILD_TYPE.lower()=="stable":
+    NEWS_CHANNEL="https://t.me/OrangeFoxUpdates"
+    SUPPORT_CHAT="https://t.me/OrangeFoxChat"
+elif FOX_BUILD_TYPE.lower()=="beta":
+    NEWS_CHANNEL="https://t.me/OrangeFoxBetaTracker"
+    SUPPORT_CHAT="https://t.me/OrangeFoxBeta"
+elif FOX_BUILD_TYPE.lower()=="unofficial":
+    if NEWS_CHANNEL=="":
+        NEWS_CHANNEL="https://t.me/ROMRecoveryNews"
+    if SUPPORT_CHAT=="":
+        SUPPORT_CHAT="https://t.me/OrangeFoxRecoveryUnofficial"
+TG_CHANNELS = """
+[B][SIZE=4]📣 Telegram Channels:[/SIZE][/B]
+News - [URL='""" + NEWS_CHANNEL + """'][U]""" + NEWS_CHANNEL + """[/U][/URL]
+Support Chat - [URL='""" + SUPPORT_CHAT + """'][U]""" + SUPPORT_CHAT + """[/U][/URL]
 """
