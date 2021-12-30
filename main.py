@@ -137,7 +137,7 @@ FILE.write(OUTPUT)
 FILE.close()
 
 # Print a Message
-print(f"DONE! You can now find the compiled template in: OUTFILE")
+print(f"DONE! You can now find the compiled template in: {OUTFILE}")
 
 # Exit
 sys.exit()
