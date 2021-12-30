@@ -5,7 +5,7 @@ import sys
 from xdaconfig import *
 
 # Open the Output File in Write Mode
-FILE = open(OUTFILE,w)
+FILE = open(OUTFILE,"w+")
 
 # Head Part
 HEAD = """
