@@ -1,31 +1,8 @@
 #!/usr/bin/env python3
 
-# Variables
-FDEVICE = ""                # Device Codename
-DEVICE_COMMON_NAME = ""     # Device Common Name
-RELEASE_DATE = ""           # Date of Release of the Build
-XDA_INIT_DATA = ""          # Date when the XDA Thread was Created
-DOWNLOAD_LINK = ""          # Download Link of your Build
-FOX_BUILD_TYPE = ""         # Beta / Stable / Unofficial
-FOX_VERSION = ""            # The Full Version of the Release. (eg. "R11.1_1")
-
-FOX_SOURCES = "https://gitlab.com/OrangeFox"
-SOURCE_CHANGELOG = "https://wiki.orangefox.tech/changelog"
-NEWS_CHANNEL = ""           # Telegram Updates Channel
-SUPPORT_CHAT = ""           # Telegram Support Chat
-
-DEVICE_TREE = ""            # The Link of the Device Tree
-KERNEL = ""                 # The Link of the Kernel (Source or Prebuilt)
-
-MAINTAINER = ""             # Name of the Maintainer
-MAINTAINER_XDA_URL = ""     # XDA URL of the Maintainer
-DONATION_URL = ""           # Your Donation Link. Leave Blank if None.
-
-# Output File
-OUTFILE = "output.txt"
-
 # Import Required Libraries
 import sys
+from xdaconfig import *
 
 # Open the Output File in Write Mode
 FILE = open(OUTFILE,w)
@@ -50,26 +27,26 @@ HEAD = """
 """
 
 # Information
-INFO = """
+INFO = f"""
 ℹ️ [B][SIZE=4]Information[/SIZE][/B]
-Status: """ + FOX_BUILD_TYPE + """
-Version: """ + FOX_VERSION + """
-Release Date: """ + RELEASE_DATE + """
+Status: {FOX_BUILD_TYPE}
+Version: {FOX_VERSION}
+Release Date: {RELEASE_DATE}
 """
 
 # Sources
-SOURCES = """
+SOURCES = f"""
 ℹ️[B] Sources[/B]
-Source Code: [U][URL]""" + FOX_SOURCES + """[/URL][/U]
-Device Tree: [URL]""" + DEVICE_TREE + """[/URL]
-Kernel: [URL]"""+ KERNEL + """[/URL]
+Source Code: [U][URL]'{FOX_SOURCES}'[/URL][/U]
+Device Tree: [URL]'{DEVICE_TREE}'[/URL]
+Kernel: [URL]'{KERNEL}'[/URL]
 Template Generator: https://github.com/OrangeFoxRecovery/XDA.git
 """
 
 # Downloads
-DOWNLOADS = """
+DOWNLOADS = f"""
 [SIZE=4]⬇️[/SIZE][B][SIZE=4]Downloads:[/SIZE][/B]
-[URL='"""+ DOWNLOAD_LINK +"""'][U]"""+ DOWNLOAD_LINK +"""[/U][/URL]
+[URL='{DOWNLOAD_LINK}'][U]{DOWNLOAD_LINK}[/U][/URL]
 """
 
 # Installation
@@ -85,19 +62,18 @@ DOCUMENTATION = """
 """
 
 # Donations
-if DONATION_URL=="":
-    DONATION_URL="https://t.me/Sushrut1101"
-DONATIONS = """
-[B][SIZE=4]💰 Donations:[/SIZE][/B]
-[U][URL]"""+ DONATION_URL +"""[/URL][/U]
-"""
+if DONATION_URL != "":
+    DONATIONS = f"""
+    [B][SIZE=4]💰 Donations:[/SIZE][/B]
+    [U][URL]'{DONATION_URL}'[/URL][/U]
+    """
 
 # Source Changelogs
 if FOX_SOURCES=="https://gitlab.com/OrangeFox":
     SOURCE_CHANGELOG = "https://wiki.orangefox.tech/changelog"
-CHANGELOG = """
+CHANGELOG = f"""
 [B][SIZE=4]📒 Source changelog:[/SIZE][/B]
-[URL='""" + SOURCE_CHANGELOG + """'][U]""" + SOURCE_CHANGELOG + """[/U][/URL]
+[URL='{SOURCE_CHANGELOG}'][U]{SOURCE_CHANGELOG}[/U][/URL]
 """
 
 # Telegram Channels
@@ -107,15 +83,17 @@ if FOX_BUILD_TYPE.lower()=="stable":
 elif FOX_BUILD_TYPE.lower()=="beta":
     NEWS_CHANNEL="https://t.me/OrangeFoxBetaTracker"
     SUPPORT_CHAT="https://t.me/OrangeFoxBeta"
-elif FOX_BUILD_TYPE.lower()=="unofficial":
-    if NEWS_CHANNEL=="":
-        NEWS_CHANNEL="https://t.me/ROMRecoveryNews"
+elif FOX_BUILD_TYPE.lower()=="unofficial" and NEWS_CHANNEL=="":
+    NEWS_CHANNEL="https://t.me/ROMRecoveryNews"
     if SUPPORT_CHAT=="":
         SUPPORT_CHAT="https://t.me/OrangeFoxRecoveryUnofficial"
-TG_CHANNELS = """
+else:
+    pass
+
+TG_CHANNELS = f"""
 [B][SIZE=4]📣 Telegram Channels:[/SIZE][/B]
-News - [URL='""" + NEWS_CHANNEL + """'][U]""" + NEWS_CHANNEL + """[/U][/URL]
-Support Chat - [URL='""" + SUPPORT_CHAT + """'][U]""" + SUPPORT_CHAT + """[/U][/URL]
+News - [URL='{NEWS_CHANNEL}'][U]{NEWS_CHANNEL}[/U][/URL]
+Support Chat - [URL='{SUPPORT_CHAT}'][U]{SUPPORT_CHAT}[/U][/URL]
 """
 
 # OrangeFox App
@@ -125,25 +103,25 @@ https://[URL='http://app.orangefox.tech/'][U]https://app.orangefox.tech/[/U][/UR
 """
 
 # XDA DevDB Information
-XDA_DEV_INFO = """
+XDA_DEV_INFO = f"""
 [B][U]XDA : DevDB Information[/U]
-OrangeFox Recovery Project, Tool/Utility for """ + FDEVICE + """ (""" + DEVICE_COMMON_NAME + """)
+OrangeFox Recovery Project, Tool/Utility for {FDEVICE} ({DEVICE_COMMON_NAME})
 """
 
 # Contributions
-CONTRIBUTIONS = """
+CONTRIBUTIONS = f"""
 [U]Contributors[/U][/B]
-[URL='"""+MAINTAINER_XDA_URL+"""']"""+MAINTAINER+"""[/URL], [URL='https://forum.xda-developers.com/m/Sushrut1101.10817501/']Sushrut Gupta[/URL] ,[URL='https://forum.xda-developers.com/member.php?u=5850987']DarthJabba9[/URL], [URL='https://forum.xda-developers.com/member.php?u=9034403']MrYacha[/URL]
+[URL='{MAINTAINER_XDA_URL}']{MAINTAINER_XDA_URL}[/URL], [URL='https://forum.xda-developers.com/m/Sushrut1101.10817501/']Sushrut Gupta[/URL] ,[URL='https://forum.xda-developers.com/member.php?u=5850987']DarthJabba9[/URL], [URL='https://forum.xda-developers.com/member.php?u=9034403']MrYacha[/URL]
 """
 
 # Credits
-CREDITS = """
+CREDITS = f"""
 [B]Credits[/B]
 * TeamWin - for TWRP
 * The OrangeFox Team - for your hard work
 * All our testers - for your patience and help
 * [USER=10817501]@Sushrut1101[/USER] - For this XDA Template
-* [URL='"""+MAINTAINER_XDA_URL+"""']"""+MAINTAINER+"""[/URL] - Maintainer
+* [URL='{MAINTAINER_XDA_URL}']{MAINTAINER_XDA_URL}[/URL] - Maintainer
 """
 
 # The Output
@@ -156,7 +134,7 @@ FILE.write(OUTPUT)
 FILE.close()
 
 # Print a Message
-print("DONE! You can now Find the Output in:",OUTFILE,'\n')
+print(f"DONE! You can now find the compiled template in: OUTFILE")
 
 # Exit
 sys.exit()
