@@ -35,6 +35,7 @@ INFO = f"""
 Status: {FOX_BUILD_TYPE}
 Version: {FOX_VERSION}
 Release Date: {RELEASE_DATE}
+Maintainer: [URL='{MAINTAINER_XDA_URL}']{MAINTAINER}[/URL]
 """
 
 # Sources
