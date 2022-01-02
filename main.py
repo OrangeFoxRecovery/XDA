@@ -30,26 +30,26 @@ HEAD = """
 """
 
 # Information
-INFO = """
+INFO = f"""
 ℹ️ [B][SIZE=4]Information[/SIZE][/B]
-Status: """ + FOX_BUILD_TYPE + """
-Version: """ + FOX_VERSION + """
-Release Date: """ + RELEASE_DATE + """
+Status: {FOX_BUILD_TYPE}
+Version: {FOX_VERSION}
+Release Date: {RELEASE_DATE}
 """
 
 # Sources
-SOURCES = """
+SOURCES = f"""
 ℹ️[B] Sources[/B]
-Source Code: [U][URL]""" + FOX_SOURCES + """[/URL][/U]
-Device Tree: [URL]""" + DEVICE_TREE + """[/URL]
-Kernel: [URL]"""+ KERNEL + """[/URL]
-Template Generator: https://github.com/OrangeFoxRecovery/XDA.git
+Source Code: [U][URL]{FOX_SOURCES}[URL][/U]
+Device Tree: [URL]{DEVICE_TREE}[/URL]
+Kernel: [URL]{KERNEL}[/URL]
+XDA Template Generator: https://github.com/OrangeFoxRecovery/XDA.git
 """
 
 # Downloads
-DOWNLOADS = """
+DOWNLOADS = f"""
 [SIZE=4]⬇️[/SIZE][B][SIZE=4]Downloads:[/SIZE][/B]
-[URL='"""+ DOWNLOAD_LINK +"""'][U]"""+ DOWNLOAD_LINK +"""[/U][/URL]
+[URL='{DOWNLOAD_LINK}'][U]{DOWNLOAD_LINK}[/U][/URL]
 """
 
 # Installation
@@ -67,17 +67,17 @@ DOCUMENTATION = """
 # Donations
 if DONATION_URL=="":
     DONATION_URL="https://t.me/Sushrut1101"
-DONATIONS = """
+DONATIONS = f"""
 [B][SIZE=4]💰 Donations:[/SIZE][/B]
-[U][URL]"""+ DONATION_URL +"""[/URL][/U]
+[U][URL]{DONATION_URL}[/URL][/U]
 """
 
 # Source Changelogs
 if FOX_SOURCES=="https://gitlab.com/OrangeFox":
     SOURCE_CHANGELOG = "https://wiki.orangefox.tech/changelog"
-CHANGELOG = """
+CHANGELOG = f"""
 [B][SIZE=4]📒 Source changelog:[/SIZE][/B]
-[URL='""" + SOURCE_CHANGELOG + """'][U]""" + SOURCE_CHANGELOG + """[/U][/URL]
+[URL='{SOURCE_CHANGELOG}'][U]{SOURCE_CHANGELOG}[/U][/URL]
 """
 
 # Telegram Channels
@@ -92,10 +92,10 @@ elif FOX_BUILD_TYPE.lower()=="unofficial":
         NEWS_CHANNEL="https://t.me/ROMRecoveryNews"
     if SUPPORT_CHAT=="":
         SUPPORT_CHAT="https://t.me/OrangeFoxRecoveryUnofficial"
-TG_CHANNELS = """
+TG_CHANNELS = f"""
 [B][SIZE=4]📣 Telegram Channels:[/SIZE][/B]
-News - [URL='""" + NEWS_CHANNEL + """'][U]""" + NEWS_CHANNEL + """[/U][/URL]
-Support Chat - [URL='""" + SUPPORT_CHAT + """'][U]""" + SUPPORT_CHAT + """[/U][/URL]
+News - [URL='{NEWS_CHANNEL}'][U]{NEWS_CHANNEL}[/U][/URL]
+Support Chat - [URL='{SUPPORT_CHAT}'][U]{SUPPORT_CHAT}[/U][/URL]
 """
 
 # OrangeFox App
@@ -105,29 +105,31 @@ https://[URL='http://app.orangefox.tech/'][U]https://app.orangefox.tech/[/U][/UR
 """
 
 # XDA DevDB Information
-XDA_DEV_INFO = """
+XDA_DEV_INFO = f"""
 [B][U]XDA : DevDB Information[/U]
-OrangeFox Recovery Project, Tool/Utility for """ + FDEVICE + """ (""" + DEVICE_COMMON_NAME + """)
+OrangeFox Recovery Project, Tool/Utility for {FDEVICE} ({DEVICE_COMMON_NAME})
 """
 
 # Contributions
-CONTRIBUTIONS = """
+CONTRIBUTIONS = f"""
 [U]Contributors[/U][/B]
-[URL='"""+MAINTAINER_XDA_URL+"""']"""+MAINTAINER+"""[/URL], [URL='https://forum.xda-developers.com/m/Sushrut1101.10817501/']Sushrut Gupta[/URL] ,[URL='https://forum.xda-developers.com/member.php?u=5850987']DarthJabba9[/URL], [URL='https://forum.xda-developers.com/member.php?u=9034403']MrYacha[/URL]
+[URL='{MAINTAINER_XDA_URL}']{MAINTAINER}[/URL], [URL='https://forum.xda-developers.com/m/Sushrut1101.10817501/']Sushrut Gupta[/URL] ,[URL='https://forum.xda-developers.com/member.php?u=5850987']DarthJabba9[/URL], [URL='https://forum.xda-developers.com/member.php?u=9034403']MrYacha[/URL]
 """
 
 # Credits
-CREDITS = """
+CREDITS = f"""
 [B]Credits[/B]
 * TeamWin - for TWRP
 * The OrangeFox Team - for your hard work
 * All our testers - for your patience and help
 * [USER=10817501]@Sushrut1101[/USER] - For this XDA Template
-* [URL='"""+MAINTAINER_XDA_URL+"""']"""+MAINTAINER+"""[/URL] - Maintainer
+* [URL='{MAINTAINER_XDA_URL}']{MAINTAINER}[/URL] - Maintainer
 """
 
 # The Output
-OUTPUT = HEAD + '\n' + INFO + '\n' + SOURCES + '\n' + DOWNLOADS + '\n' + INSTALLATION + '\n' + DOCUMENTATION + '\n' + DONATIONS + '\n' + CHANGELOG + '\n' + TG_CHANNELS + '\n' + APP + '\n' + XDA_DEV_INFO + '\n' + CONTRIBUTIONS + '\n' + CREDITS + '\n'
+OUTPUT = f"""
+{HEAD} \n {INFO} \n {SOURCES} \n {DOWNLOADS} \n {INSTALLATION} \n {DOCUMENTATION} \n {DONATIONS} \n {CHANGELOG} \n {TG_CHANNELS} \n {APP} \n {XDA_DEV_INFO} \n {CONTRIBUTIONS} \n {CREDITS} \n
+"""
 
 # Write the Output to the Outfile
 FILE.write(OUTPUT)
@@ -136,7 +138,7 @@ FILE.write(OUTPUT)
 FILE.close()
 
 # Print a Message
-print("DONE! You can now Find the Output in:",OUTFILE,'\n')
+print(f"DONE! You can now Find the Output in: {OUTFILE} \n")
 
 # Exit
 sys.exit()
