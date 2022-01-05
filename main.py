@@ -8,7 +8,7 @@ from config import *
 OUTFILE = "output.txt"
 
 # Open the Output File in Write Mode
-FILE = open(OUTFILE,w)
+FILE = open(OUTFILE,"w")
 
 # Head Part
 HEAD = """
